@@ -21,4 +21,7 @@ and O(n^2)
 
 After reading a bit, it seems that since std::unordered_map.find() is gives us a result in O(1) time, we can build the
 map and check for our value as the loop goes - giving us a result in O(n) time
+
 ### C
+The same approach is done in C. However I had to implement a very basic hash map functionality to achieve the same
+behavior.

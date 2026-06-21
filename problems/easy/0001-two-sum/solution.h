@@ -1,7 +1,6 @@
 #ifndef __SOLUTION_H_
 #define __SOLUTION_H_
 
-#ifdef __cplusplus
 #include <vector>
 /**
  * Two Sum
@@ -9,10 +8,6 @@
  */
 
 std::vector<int> twoSum(const std::vector<int>& nums, int target);
+extern "C" void twoSum_C(const int* const nums, int num_elements, int* res, int target);
 
-#else
-
-int* twoSum_C(const int* cost nums, int target);
-
-#endif
 #endif
