@@ -11,3 +11,4 @@ add_subdirectory(third-party/googletest)
 # Easy
 add_subdirectory(tests/easy/)
 add_subdirectory(problems/easy/0001-two-sum)
+add_subdirectory(problems/easy/0009-palindrome)
