@@ -51,3 +51,20 @@ while (n != 0)
 }
 ´´´
 - Now check if they are equal. If so its a palindrome
+
+### 13 Roman numeral to int
+The tricky part was to determince if an I comes before V or when X comes before C or other similar situations. Hence the
+implementation which was finally chosen basically does this:
+- Iterate through the string
+- Add up the integer value for letter
+- Determine if the previous letter affects the current letter in any way
+- For ex consider IV.
+    - I = 1, total = 1
+    - V = 5 : total = 6
+    - But V "allows" I to subtract from itself so we need to undo the addition and subtract as well to get the original
+      value
+    - total = total - 1 - 1 = 4
+- The best way to determine if the previous letter does indeed affect the current letter is to exploit how roman
+  numerals are written - Largest numbers left to right. When parsing each letter, if the current letter is higher
+  value than the previous one, then for sure it subtracts the value.
+- So using an std::map for lookup and a single if condition, we can get a low speed of execution.
